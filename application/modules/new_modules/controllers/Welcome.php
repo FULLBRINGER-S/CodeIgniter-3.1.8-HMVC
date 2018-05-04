@@ -22,4 +22,13 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+
+	//check this out on CodeIgniter-3.1.8-HMVC/index.php/new_modules/welcome/test_model
+
+	public function test_model(){
+		$this->load->model('new_modules/test_model');
+		$output = $this->test_model->get_text();
+		echo $output;
+	}
+
 }
